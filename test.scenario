@@ -1,0 +1,25 @@
+hostpanel-php v1.0.0 test scenario
+
+1. Build package with ./build.sh.
+2. Upload and install hostpanel-php-1.0.0.zip.
+3. Verify hostpanel-php appears in installed packages.
+4. Verify /app/php frontend loads.
+5. Verify /cpanelapi/php/runtime reports PHP 8.4 and PHP-FPM 8.4.
+6. Enable PHP modal lists eligible main domains and subdomains.
+7. Confirm cpanel.* and ftp.* are excluded.
+8. Selecting a domain auto-fills document root from registry.
+9. Enable PHP for a test domain.
+10. Verify assignment DB row exists in php_assignments.
+11. Verify PHP-FPM pool file exists.
+12. Verify hostpanel-php-fpm is active.
+13. Verify nginx vhost includes the managed PHP block.
+14. Upload info.php and confirm PHP executes through nginx.
+15. Change PHP settings and verify pool rewrite.
+16. Verify logs are visible in Logs modal.
+17. Disable PHP and verify pool and PHP block are removed.
+18. Verify website files are preserved.
+19. User delete hook removes that user's PHP assignments.
+20. Domain delete hook removes assignment and PHP block.
+21. SSL cert import/deletion hooks preserve or reapply PHP block correctly.
+22. Uninstall is blocked when assignments exist.
+23. Force uninstall removes PHP-owned resources and preserves Linux users, home directories, DNS, SSL, FTP, databases, and site files.

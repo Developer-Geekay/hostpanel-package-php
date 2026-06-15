@@ -1,0 +1,9 @@
+.DS_Store
+*.zip
+*.tgz
+runtime-full/
+bin/php-8.4
+bin/php-fpm-8.4
+__pycache__/
+*.pyc
+.pytest_cache/

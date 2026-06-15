@@ -1,0 +1,15 @@
+[Unit]
+Description=HostPanel PHP-FPM 8.4
+After=network.target
+
+[Service]
+Type=simple
+RuntimeDirectory=hostpanel-php
+RuntimeDirectoryMode=0755
+ExecStart=/opt/hostpanel/plugins/php/php-fpm-8.4 --nodaemonize --fpm-config /opt/hostpanel/plugins/php/conf/php-fpm.conf
+ExecReload=/bin/kill -USR2 $MAINPID
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
