@@ -30,6 +30,7 @@ PLUGIN_MANIFEST = {
         "label": "PHP-FPM 8.4",
         "icon": "code",
         "can_reload": True,
+        "config_path": "/opt/hostpanel/plugins/php/conf/php-fpm.conf",
     },
 }
 
